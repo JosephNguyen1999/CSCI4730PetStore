@@ -9,14 +9,14 @@
 }
                
        .button {
-  text-align: right;
+  text-align: center;
 }
     </style>
 </head>
 
 <body>
     <div class="header">
-<h1>EDIT PRODUCT</h1><br>
+<h1>EDIT PRODUCT INFO</h1><br>
     </div>
 
     <div class="content">
@@ -51,7 +51,7 @@
 <img src="img_girl.jpg" alt="Girl in a jacket" width="200" height="200">
 
   <div class="button">
-<input type="submit" value="Edit" align="center">
+<input type="submit" value="Update" align="center">
            </div>
 </form>
     </div>
