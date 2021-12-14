@@ -21,7 +21,7 @@
 
     <div class="content">
     <br><br>
-<form action='edit_product_form.php' method='post'> 
+<form action='edit_product.php' method='post'> 
 	<label for="product id">Product ID :</label><nbsp>
  <input type="number" id="product_id" name="product_id" size="40px"><br><br>
  
