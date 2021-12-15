@@ -57,7 +57,7 @@
             <input type="text" placeholder="johnsmith@gmail.com" name="email" required><br>
 
             <label for="password">Password</label><br>
-            <input type="text" placeholder="********" name="password" required><br><br>
+            <input type="password" placeholder="********" name="password" required ><br><br>
 
             <button class='button' type="submit" name="submit">Add User</button>
         </form>

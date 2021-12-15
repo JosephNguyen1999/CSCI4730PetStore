@@ -1,4 +1,5 @@
 <?php
+/*
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -10,6 +11,25 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+*/
+
+$dsn='mysql:host=localhost; dbname=petstore4370';
+    $username='root';
+    $password='';
+
+    try 
+    {
+        $db= new PDO($dsn, $username, $password);
+    }
+    catch(PDOException $e)
+    {
+        $error_message=$e->getMessage();
+        echo $error_message;
+        exit();
+    }
+    
+
+
 
 if (isset($_POST["submit"])) {
     $name = $_POST['name'];
@@ -22,11 +42,19 @@ if (isset($_POST["submit"])) {
     include('add_product_form.php');
 }
 
-
-$stmt = "INSERT INTO products (Name, Price, Category, Description, Image, qty) VALUES ('$name', '$price', '$category', '$description', '$image', '$quantity')";
-mysqli_query($conn, $stmt);
+$query="INSERT INTO products (Name, Price, Category, Description, Image, qty) VALUES ('$name', '$price', '$category', '$description', '$image', '$quantity')";
+$statement1 = $db->prepare($query);
+$statement1->execute();
+$temp3 = $statement1->fetchAll();
 
 include('add_product_form.php');
 
+/*
+$stmt = "INSERT INTO products (Name, Price, Category, Description, Image, qty) VALUES ('$name', '$price', '$category', '$description', '$image', '$quantity')";
+mysqli_query($conn, $stmt);
+
+
+
 
 $conn->close();
+*/
