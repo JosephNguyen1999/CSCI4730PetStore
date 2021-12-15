@@ -1,13 +1,3 @@
-<?php
-
-
-
-
-
-
-
-?>
-
 <!DOCTYPE html>
 <html>
 
@@ -39,10 +29,10 @@
     <div class="content">
         <br><br>
 
-        <form action='removecart.php' method='post'>
+        <form action='remove_from_cart.php' method='post'>
             <h2>Remove Product from Cart</h2>
 
-            
+
 
             <label for="prodID">ProductID</label><br>
             <input type="text" placeholder="" name="prodID" required><br>

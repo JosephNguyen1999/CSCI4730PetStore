@@ -1,13 +1,3 @@
-<?php
-
-
-
-
-
-
-
-?>
-
 <!DOCTYPE html>
 <html>
 
@@ -39,10 +29,10 @@
     <div class="content">
         <br><br>
 
-        <form action='addcart.php' method='post'>
+        <form action='add_to_cart.php' method='post'>
             <h2>Add Product to Cart</h2>
 
-            
+
 
             <label for="prodID">ProductID</label><br>
             <input type="text" placeholder="" name="prodID" required><br>
@@ -56,7 +46,7 @@
             <label for="password">Password</label><br>
             <input type="text" placeholder="********" name="password" required><br><br>
 
-            <button class='button' type="submit" name="submit">Add User</button>
+            <button class='button' type="submit" name="submit">Add to Cart</button>
         </form>
     </div>
 </body>

@@ -19,7 +19,7 @@
             text-align: center;
         }
 
-        .image_button{
+        .image_button {
             margin-left: 77px;
         }
     </style>
