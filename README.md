@@ -1,5 +1,7 @@
 Pet Store Database
+
 Group 4
+
 Reese Mallory, Kalyb Sanders, Joseph Nguyen, and Avranil Basu
 
 The documentation folder contains our various diagram and our presentation slides that
@@ -15,3 +17,6 @@ STEPS TO RUN OUR FORMS
 5. go to localhost/(folderName)
 6. choose php file with form in the file name such as (add_payment_form.php)
 7. run and play with our forms that connect with the database!
+
+
+Github: https://github.com/mm10633/CSCI4730PetStore
