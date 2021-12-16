@@ -9,13 +9,12 @@ $database = "petstore4370";
 $conn = new mysqli($servername, $username, $password, $database);
 // Check connection
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+  die("Connection failed: " . $conn->connect_error);
 }
 ?>
 
 <!DOCTYPE html>
 <html>
-
 <head>
     <style>
         .header {
@@ -31,45 +30,45 @@ if ($conn->connect_error) {
         .content {
             text-align: center;
         }
+
     </style>
 </head>
 
 <body>
-    <div class="header">
-        <h1>SHOPPING CART</h1><br>
-    </div>
+<div class="header">
+    <h1>SHOPPING CART</h1><br>
+</div>
 
-    <div class="content">
-        <br><br>
-        <?php
-        $cart = "SELECT * FROM cartitems";
-        $result = $conn->query($cart);
+<div class="content">
+    <br><br>
+    <?php
+    $cart = "SELECT * FROM cartitems";
+    $result = $conn->query($cart);
 
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                echo "Cart ID: " . $row["cart_ID"] . " | Product ID: " . $row["prod_ID"] . "<br>";
-            }
-        } else {
-            echo "0 results";
+    if($result->num_rows > 0){
+        while($row = $result->fetch_assoc() ){
+            echo "Cart ID: " . $row["cart_ID"] ." | Product ID: " .$row["prod_ID"]. "<br>";
         }
-        ?>
+    } else {
+        echo "0 results";
+    }
+    ?>
 
-        <form action='view_cart_checkout.php' method='post'>
+    <form action='view_cart_checkout.php' method='post'>
 
-            <div class="shopping_cart">
-
-
-            </div><br><br><br><br><br><br><br><br>
-
-
-            <label for="cart_ID">Cart ID</label><br>
-            <input type="text" placeholder="cart_ID" name="cart_ID" required><br>
-
-            <button class='button' type="submit" name="submit">Checkout</button>
+        <div class="shopping_cart">
 
 
-        </form>
-    </div>
+        </div><br><br><br><br><br><br><br><br>
+
+
+        <label for="cart_ID">Cart ID</label><br>
+        <input type="text" placeholder="cart_ID" name="cart_ID" required><br>
+
+        <button class='button' type="submit" name="submit">Checkout</button>
+
+
+    </form>
+</div>
 </body>
-
 </html>

@@ -14,13 +14,25 @@ if ($conn->connect_error) {
 
 if (isset($_POST['submit'])) {
     $cartID = $_POST['cart_ID'];
-    $delete = "DELETE FROM cartitems WHERE cart_ID = $cartID";
-    echo "$cartID";
-    $out = $conn->query($delete);
-} else {
 
+    $check = "DELETE FROM cartitems WHERE cart_ID = $cartID";
+    $order = "INSERT INTO orders (user_ID, cart_ID) VALUES ($cartID, $cartID);";
+
+     // Check username is exists or not
+      $query = "SELECT count(*) as allcount FROM cartitems
+              WHERE cart_ID = $cartID";
+
+      $result = mysqli_query($conn,$query);
+      $row = mysqli_fetch_array($result);
+      $allcount = $row['allcount'];
+
+      if($allcount != 0) {
+        $checkout = $conn->query($check);
+        $pushOrder = $conn->query($order);
+      }
 }
 
 include('view_cart_checkout_form.php');
 
 $conn->close();
+?>
