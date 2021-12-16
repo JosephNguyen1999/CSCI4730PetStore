@@ -14,9 +14,9 @@ STEPS TO RUN OUR FORMS
 2. Download our files and store them in xampp/htdocs/(folderName)
 3. Start MySQL and Apache Web Server
 4. Run SQL script (petstore4370.sql)
-5. go to localhost/(folderName)/(fileName) -Form File Names are listed below
-6. choose php file with form in the file name such as (add_payment_form.php)
-7. run and play with our forms that connect with the database!
+5. Go to localhost/(folderName)/(fileName) or localhost/(fileName) -Form File Names are listed below
+6. Choose php file with form in the file name such as (add_payment_form.php)
+7. Run and play with our forms that connect with the database!
 
 Forms File Names
 1. add_payment_form.php
